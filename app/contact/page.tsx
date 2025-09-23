@@ -239,7 +239,7 @@ export default function ContactPage() {
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h2>
                 <p className="text-gray-600 mb-8">
                   Ready to transform your document workflow? Get in touch with our team 
-                  and discover how Polygap can transform your document workflow.
+                  and discover how Poligap can transform your document workflow.
                 </p>
               </div>
 

@@ -18,7 +18,7 @@ const Header = () => {
   }, [])
 
   const navItems = [
-    { name: 'Features', href: '#features' },
+    { name: 'Home', href: '/' },
     { name: 'Demo', href: '#demo' },
     { name: 'Pricing', href: '/pricing' },
     { name: 'About', href: '/about' },
@@ -43,7 +43,7 @@ const Header = () => {
               <Brain className="h-6 w-6 text-white" />
             </div>
             <span className="text-xl font-bold text-gray-900">
-              Polygap
+              Poligap
             </span>
           </div>
 

@@ -17,7 +17,7 @@ const TestimonialsSection = () => {
       company: 'Tech Solutions Inc.',
       avatar: '/api/placeholder/64/64',
       rating: 5,
-      quote: 'Polygap has streamlined our document review process significantly. The AI suggestions are helpful and the interface is intuitive to use.',
+      quote: 'Poligap has streamlined our document review process significantly. The AI suggestions are helpful and the interface is intuitive to use.',
       metrics: 'Improved efficiency',
       industry: 'Technology'
     },
@@ -82,6 +82,14 @@ const TestimonialsSection = () => {
       industry: 'Business',
       color: 'bg-green-500'
     }
+  ]
+
+  const complianceStandards = [
+    'GDPR', 'CCPA', 'HIPAA', 'ISO 27001', 'ISO 9001', 'SOX',
+    'PCI DSS', 'NIST', 'SOC 2', 'FERPA', 'GLBA', 'PIPEDA',
+    'LGPD', 'PDPA', 'CPRA', 'FISMA', 'FedRAMP', 'ITAR',
+    'EAR', 'GDPR-UK', 'Basel III', 'MiFID II', 'COSO',
+    'COBIT', 'ITIL'
   ]
 
   const companyLogos = [
@@ -298,7 +306,7 @@ const TestimonialsSection = () => {
           </div>
         </motion.div>
 
-        {/* Use Cases */}
+        {/* Compliance Standards Marquee */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -306,50 +314,62 @@ const TestimonialsSection = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="mb-16"
         >
-          <h3 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-12">
-            Success Stories Across Industries
-          </h3>
+          <div className="text-center mb-12">
+            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+              Comprehensive{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-secondary-600">
+                Compliance Coverage
+              </span>
+            </h3>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Built-in support for global regulatory standards and compliance frameworks
+            </p>
+          </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
-            {useCases.map((useCase, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                whileHover={{ scale: 1.02 }}
-                className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300"
-              >
-                {/* Icon */}
-                <div className={`w-12 h-12 ${useCase.color} rounded-xl flex items-center justify-center text-white mb-4`}>
-                  {React.createElement(useCase.icon, { className: "w-6 h-6" })}
-                </div>
-
-                {/* Content */}
-                <h4 className="text-xl font-semibold text-gray-900 mb-2">
-                  {useCase.title}
-                </h4>
-                <p className="text-gray-600 mb-4">
-                  {useCase.description}
-                </p>
-
-                {/* Results */}
-                <div className="space-y-2">
-                  {useCase.results.map((result, resultIndex) => (
-                    <div key={resultIndex} className="flex items-start space-x-2">
-                      <div className="w-1.5 h-1.5 bg-secondary-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-sm text-gray-700">{result}</span>
-                    </div>
+          {/* Enhanced Marquee Container */}
+          <div className="relative overflow-hidden bg-gradient-to-r from-primary-50 via-legal-50 to-secondary-50 rounded-3xl py-12 shadow-2xl border border-primary-200/30">
+            {/* Gradient Overlays for fade effect */}
+            <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-legal-50 to-transparent z-10"></div>
+            <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-legal-50 to-transparent z-10"></div>
+            
+            {/* Floating Background Elements */}
+            <div className="absolute top-4 left-8 w-16 h-16 bg-gradient-to-br from-primary-300 to-primary-400 rounded-full opacity-15 animate-pulse"></div>
+            <div className="absolute bottom-4 right-12 w-12 h-12 bg-gradient-to-br from-secondary-300 to-secondary-400 rounded-full opacity-15 animate-pulse" style={{animationDelay: '1s'}}></div>
+            <div className="absolute top-8 right-24 w-8 h-8 bg-gradient-to-br from-accent-300 to-accent-400 rounded-full opacity-15 animate-pulse" style={{animationDelay: '2s'}}></div>
+            
+            <div className="flex animate-marquee whitespace-nowrap">
+              {[...Array(3)].map((_, setIndex) => (
+                <div key={setIndex} className="flex items-center space-x-8 mr-8">
+                  {complianceStandards.map((standard, index) => (
+                    <motion.div
+                      key={`${setIndex}-${index}`}
+                      whileHover={{ scale: 1.05, y: -2 }}
+                      className="flex items-center space-x-3 bg-white/95 backdrop-blur-sm rounded-xl px-6 py-4 shadow-lg border border-legal-200 hover:shadow-xl hover:border-primary-300 hover:bg-primary-50/50 transition-all duration-300 cursor-pointer group"
+                    >
+                      <div className="w-10 h-10 bg-gradient-to-br from-primary-600 via-primary-700 to-secondary-600 rounded-xl flex items-center justify-center text-white font-bold text-sm shadow-lg group-hover:shadow-xl group-hover:from-primary-500 group-hover:to-secondary-500 transition-all duration-300">
+                        {standard.charAt(0)}
+                      </div>
+                      <span className="font-bold text-legal-800 group-hover:text-primary-700 transition-colors duration-300 text-sm md:text-base">
+                        {standard}
+                      </span>
+                      {/* Compliance badge */}
+                      <div className="w-2 h-2 bg-secondary-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-sm"></div>
+                    </motion.div>
                   ))}
                 </div>
-
-                {/* Industry Tag */}
-                <div className="mt-4 inline-flex items-center px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-medium">
-                  {useCase.industry}
-                </div>
-              </motion.div>
-            ))}
+              ))}
+            </div>
+          </div>
+          
+          {/* Enhanced Bottom Text */}
+          <div className="text-center mt-8">
+            <div className="inline-flex items-center space-x-3 bg-gradient-to-r from-primary-100 via-legal-100 to-secondary-100 rounded-full px-8 py-4 border border-primary-300/50 shadow-lg">
+              <div className="w-3 h-3 bg-secondary-500 rounded-full animate-pulse shadow-sm"></div>
+              <span className="font-bold text-legal-800">
+                Supporting <span className="text-primary-700 font-black text-lg">25+</span> compliance frameworks worldwide
+              </span>
+              <div className="w-3 h-3 bg-primary-500 rounded-full animate-pulse shadow-sm" style={{animationDelay: '0.5s'}}></div>
+            </div>
           </div>
         </motion.div>
 

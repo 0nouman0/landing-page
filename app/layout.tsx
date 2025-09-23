@@ -5,24 +5,24 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://polygap.com'),
-  title: 'Polygap | AI-Powered Document Analysis Platform',
-  description: 'Transform your document workflow with AI-powered analysis and insights. Streamline processes with intelligent suggestions and enterprise-grade security.',
-  keywords: 'AI document analysis, document workflow, business automation, document processing, team collaboration, productivity tools',
-  authors: [{ name: 'Polygap' }],
-  creator: 'Polygap',
-  publisher: 'Polygap',
+  metadataBase: new URL('https://poligap.com'),
+  title: 'Poligap | All-in-One Legal & Compliance Monitoring Tool',
+  description: 'Comprehensive legal and compliance monitoring assessments powered by AI. Streamline legal workflows with intelligent document analysis, risk assessment, and regulatory compliance tracking.',
+  keywords: 'legal compliance, compliance monitoring, legal document analysis, risk assessment, regulatory compliance, legal technology, compliance tools',
+  authors: [{ name: 'Poligap' }],
+  creator: 'Poligap',
+  publisher: 'Poligap',
   openGraph: {
-    title: 'Polygap | AI-Powered Document Analysis Platform',
-    description: 'Transform your document workflow with AI-powered analysis and insights. Streamline processes with intelligent suggestions.',
-    url: 'https://polygap.com',
-    siteName: 'Polygap',
+    title: 'Poligap | All-in-One Legal & Compliance Monitoring Tool',
+    description: 'Comprehensive legal and compliance monitoring assessments powered by AI. Streamline legal workflows with intelligent document analysis.',
+    url: 'https://poligap.com',
+    siteName: 'Poligap',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Polygap - AI Document Analysis Platform',
+        alt: 'Poligap - AI Document Analysis Platform',
       },
     ],
     locale: 'en_US',
@@ -30,8 +30,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Polygap | AI-Powered Document Analysis Platform',
-    description: 'Transform your document workflow with AI-powered analysis and insights. Streamline processes with intelligent suggestions.',
+    title: 'Poligap | All-in-One Legal & Compliance Monitoring Tool',
+    description: 'Comprehensive legal and compliance monitoring assessments powered by AI. Streamline legal workflows with intelligent document analysis.',
     images: ['/og-image.jpg'],
   },
   robots: {
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: 'polygap-verification-code',
+    google: 'poligap-verification-code',
   },
 }
 

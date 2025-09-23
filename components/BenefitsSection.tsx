@@ -268,16 +268,16 @@ const BenefitsSection = () => {
           className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8"
         >
           <div className="text-center">
-            <div className="text-4xl font-bold text-primary-600 mb-2">1000+</div>
-            <div className="text-gray-600">Active Users</div>
+            <div className="text-4xl font-bold text-primary-600 mb-2">95%</div>
+            <div className="text-gray-600">Faster Analysis Speed</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-secondary-600 mb-2">50K+</div>
-            <div className="text-gray-600">Documents Processed</div>
+            <div className="text-4xl font-bold text-secondary-600 mb-2">99.2%</div>
+            <div className="text-gray-600">AI Accuracy Rate</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-accent-600 mb-2">24/7</div>
-            <div className="text-gray-600">Support Available</div>
+            <div className="text-4xl font-bold text-accent-600 mb-2">85%</div>
+            <div className="text-gray-600">Time Reduction</div>
           </div>
         </motion.div>
       </div>

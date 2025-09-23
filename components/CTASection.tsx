@@ -11,7 +11,7 @@ const CTASection = () => {
       title: 'Get Demo',
       description: 'Schedule a personalized demo with our team',
       buttonText: 'Book Demo',
-      buttonStyle: 'bg-primary-600 text-white hover:bg-primary-700',
+      buttonStyle: 'bg-white text-primary-900 hover:bg-gray-100 shadow-lg font-bold',
       popular: true
     },
     {
@@ -19,7 +19,7 @@ const CTASection = () => {
       title: 'Start Free Trial',
       description: '14-day free trial with full platform access',
       buttonText: 'Try Free',
-      buttonStyle: 'bg-secondary-600 text-white hover:bg-secondary-700',
+      buttonStyle: 'bg-secondary-600 text-white hover:bg-secondary-700 shadow-lg font-bold',
       popular: false
     },
     {
@@ -27,7 +27,7 @@ const CTASection = () => {
       title: 'Download Guide',
       description: 'AI in Document Processing: Complete Guide 2024',
       buttonText: 'Download',
-      buttonStyle: 'border-2 border-gray-300 text-gray-700 hover:border-primary-600 hover:text-primary-600',
+      buttonStyle: 'border-2 border-white/50 text-white hover:border-white hover:bg-white/10 font-bold',
       popular: false
     },
     {
@@ -35,7 +35,7 @@ const CTASection = () => {
       title: 'Contact Sales',
       description: 'Speak with our enterprise solutions team',
       buttonText: 'Contact Us',
-      buttonStyle: 'border-2 border-gray-300 text-gray-700 hover:border-secondary-600 hover:text-secondary-600',
+      buttonStyle: 'border-2 border-white/50 text-white hover:border-white hover:bg-white/10 font-bold',
       popular: false
     }
   ]
@@ -78,16 +78,16 @@ const CTASection = () => {
             className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12"
           >
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-secondary-300 mb-2">Fast</div>
-              <div className="text-gray-300">Processing</div>
+              <div className="text-3xl md:text-4xl font-bold text-secondary-300 mb-2">95%</div>
+              <div className="text-gray-300">Faster Processing</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-accent-300 mb-2">Smart</div>
-              <div className="text-gray-300">Analysis</div>
+              <div className="text-3xl md:text-4xl font-bold text-accent-300 mb-2">99.2%</div>
+              <div className="text-gray-300">AI Accuracy</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-green-300 mb-2">1000+</div>
-              <div className="text-gray-300">Happy Users</div>
+              <div className="text-3xl md:text-4xl font-bold text-green-300 mb-2">85%</div>
+              <div className="text-gray-300">Time Saved</div>
             </div>
           </motion.div>
         </motion.div>
@@ -108,8 +108,8 @@ const CTASection = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ scale: 1.05 }}
-              className={`relative bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 ${
-                option.popular ? 'ring-2 ring-secondary-400' : ''
+              className={`relative bg-white/15 backdrop-blur-sm rounded-2xl p-6 border border-white/30 hover:bg-white/20 transition-all duration-300 shadow-xl ${
+                option.popular ? 'ring-2 ring-secondary-400 bg-white/20' : ''
               }`}
             >
               {/* Popular Badge */}
@@ -120,15 +120,15 @@ const CTASection = () => {
               )}
 
               {/* Icon */}
-              <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center text-white mb-4">
+              <div className="w-12 h-12 bg-white/30 rounded-xl flex items-center justify-center text-white mb-4 shadow-lg">
                 {React.createElement(option.icon, { className: "w-6 h-6" })}
               </div>
 
               {/* Content */}
-              <h3 className="text-lg font-semibold text-white mb-2">
+              <h3 className="text-lg font-bold text-white mb-2">
                 {option.title}
               </h3>
-              <p className="text-gray-300 text-sm mb-6">
+              <p className="text-gray-200 text-sm mb-6 font-medium">
                 {option.description}
               </p>
 
@@ -153,11 +153,11 @@ const CTASection = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-center"
         >
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+          <div className="bg-white/15 backdrop-blur-sm rounded-2xl p-8 border border-white/30 shadow-xl">
             <h3 className="text-2xl font-bold text-white mb-4">
               Enterprise Solutions Available
             </h3>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+            <p className="text-gray-200 mb-6 max-w-2xl mx-auto font-medium">
               Need custom integrations, dedicated support, or volume pricing? 
               Our enterprise team is ready to help you scale your operations.
             </p>
@@ -172,9 +172,9 @@ const CTASection = () => {
                 <ArrowRight className="w-4 h-4" />
               </motion.button>
               
-              <div className="flex items-center space-x-4 text-gray-300">
-                <span className="text-sm">or call</span>
-                <a href="tel:+1-555-0123" className="text-secondary-300 hover:text-secondary-200 font-medium">
+              <div className="flex items-center space-x-4 text-gray-200">
+                <span className="text-sm font-medium">or call</span>
+                <a href="tel:+1-555-0123" className="text-secondary-300 hover:text-secondary-200 font-bold">
                   +1 (555) 123-4567
                 </a>
               </div>
@@ -190,22 +190,22 @@ const CTASection = () => {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="mt-12 text-center"
         >
-          <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8 text-gray-300">
+          <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8 text-gray-200">
             <div className="flex items-center space-x-2">
-              <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-              <span className="text-sm">No setup fees</span>
+              <div className="w-2 h-2 bg-secondary-400 rounded-full"></div>
+              <span className="text-sm font-medium">No setup fees</span>
             </div>
             <div className="flex items-center space-x-2">
-              <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-              <span className="text-sm">Cancel anytime</span>
+              <div className="w-2 h-2 bg-secondary-400 rounded-full"></div>
+              <span className="text-sm font-medium">Cancel anytime</span>
             </div>
             <div className="flex items-center space-x-2">
-              <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-              <span className="text-sm">SOC 2 compliant</span>
+              <div className="w-2 h-2 bg-secondary-400 rounded-full"></div>
+              <span className="text-sm font-medium">SOC 2 compliant</span>
             </div>
             <div className="flex items-center space-x-2">
-              <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-              <span className="text-sm">24/7 support</span>
+              <div className="w-2 h-2 bg-secondary-400 rounded-full"></div>
+              <span className="text-sm font-medium">24/7 support</span>
             </div>
           </div>
         </motion.div>

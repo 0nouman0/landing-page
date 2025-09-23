@@ -55,38 +55,6 @@ export default function AboutPage() {
     }
   ]
 
-  const timeline = [
-    {
-      year: '2020',
-      title: 'Company Founded',
-      description: 'ContractAI was founded with a vision to revolutionize legal document review using artificial intelligence.',
-      milestone: 'Founded'
-    },
-    {
-      year: '2021',
-      title: 'First AI Model',
-      description: 'Launched our first AI-powered contract analysis engine, achieving 85% accuracy in clause identification.',
-      milestone: 'Product Launch'
-    },
-    {
-      year: '2022',
-      title: 'Series A Funding',
-      description: 'Raised $10M in Series A funding to accelerate product development and expand our team.',
-      milestone: 'Funding'
-    },
-    {
-      year: '2023',
-      title: 'Enterprise Launch',
-      description: 'Launched enterprise features including custom AI training, white-label solutions, and advanced security.',
-      milestone: 'Enterprise'
-    },
-    {
-      year: '2024',
-      title: 'Global Expansion',
-      description: 'Expanded to serve legal teams in over 50 countries with multi-language support and regional compliance.',
-      milestone: 'Global'
-    }
-  ]
 
   const team = [
     {
@@ -284,61 +252,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Timeline Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Our Journey
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From a small startup to a global leader in legal AI technology.
-            </p>
-          </motion.div>
-
-          <div className="relative">
-            {/* Timeline line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-primary-500 to-secondary-500 rounded-full"></div>
-
-            <div className="space-y-12">
-              {timeline.map((item, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className={`flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}
-                >
-                  <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
-                    <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200">
-                      <div className="text-primary-600 font-bold text-lg mb-2">{item.year}</div>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-3">{item.title}</h3>
-                      <p className="text-gray-600">{item.description}</p>
-                      <div className="mt-4">
-                        <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-primary-100 text-primary-700">
-                          {item.milestone}
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  {/* Timeline dot */}
-                  <div className="relative z-10 w-4 h-4 bg-primary-500 rounded-full border-4 border-white shadow-lg"></div>
-                  
-                  <div className="w-1/2"></div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Team Section */}
       <section className="py-20 bg-gray-50">

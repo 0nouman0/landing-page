@@ -3,64 +3,64 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { 
+  Search, 
+  FileCheck, 
+  FileEdit, 
+  Database, 
   Brain, 
-  FileText, 
-  Shield, 
-  Zap, 
-  Users, 
+  Activity,
   BarChart3,
-  CheckCircle2,
-  Download
+  Shield
 } from 'lucide-react'
 
 const FeaturesSection = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Analysis',
-      description: 'Advanced document analysis with intelligent suggestions and automated insights for better decision making.',
+      icon: Search,
+      title: 'Policy Analyser',
+      description: 'Intelligent policy analysis with automated compliance checking, gap identification, and regulatory alignment assessment.',
       color: 'bg-primary-100 text-primary-600'
     },
     {
-      icon: FileText,
-      title: 'Smart Document Processing',
-      description: 'Upload documents and get instant parsing with professional formatting and structure recognition.',
+      icon: FileCheck,
+      title: 'Contract Review',
+      description: 'Comprehensive contract analysis with clause identification, risk assessment, and compliance verification.',
       color: 'bg-secondary-100 text-secondary-600'
     },
     {
-      icon: Zap,
-      title: 'Interactive Editing',
-      description: 'Accept, reject, or modify AI suggestions with our intuitive editor and real-time collaboration tools.',
+      icon: FileEdit,
+      title: 'Policy Generator',
+      description: 'AI-powered policy creation with customizable templates, regulatory compliance, and automated formatting.',
       color: 'bg-accent-100 text-accent-600'
+    },
+    {
+      icon: Database,
+      title: 'Rulebase',
+      description: 'Centralized rule management system with version control, approval workflows, and automated updates.',
+      color: 'bg-green-100 text-green-600'
+    },
+    {
+      icon: Brain,
+      title: 'Custom Knowledge Analysis',
+      description: 'Tailored knowledge base analysis with domain-specific insights and intelligent recommendations.',
+      color: 'bg-purple-100 text-purple-600'
+    },
+    {
+      icon: Activity,
+      title: 'Audit Log Tracker',
+      description: 'Comprehensive audit trail monitoring with real-time tracking and compliance reporting capabilities.',
+      color: 'bg-blue-100 text-blue-600'
+    },
+    {
+      icon: BarChart3,
+      title: 'Analytics Dashboard',
+      description: 'Interactive dashboards with compliance metrics, risk visualization, and performance analytics.',
+      color: 'bg-indigo-100 text-indigo-600'
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Industry-standard encryption and secure cloud infrastructure to protect your sensitive documents.',
-      color: 'bg-green-100 text-green-600'
-    },
-    {
-      icon: BarChart3,
-      title: 'Analytics & Insights',
-      description: 'Advanced analytics for document insights, scoring, and automated reporting dashboards.',
-      color: 'bg-purple-100 text-purple-600'
-    },
-    {
-      icon: Users,
-      title: 'Team Collaboration',
-      description: 'Real-time collaboration tools with role-based permissions and comprehensive audit trails.',
-      color: 'bg-blue-100 text-blue-600'
-    },
-    {
-      icon: CheckCircle2,
-      title: 'Template Management',
-      description: 'Customizable document templates with pre-configured workflows and approval processes.',
-      color: 'bg-indigo-100 text-indigo-600'
-    },
-    {
-      icon: Download,
-      title: 'Export & Integration',
-      description: 'Export to PDF, Word, or integrate with your existing tech stack via comprehensive APIs.',
+      description: 'Legal-grade security with encryption, access controls, and compliance with industry standards.',
       color: 'bg-pink-100 text-pink-600'
     }
   ]
@@ -98,14 +98,14 @@ const FeaturesSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Powerful Features for{' '}
+            Comprehensive Features for{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-secondary-600">
-              Modern Teams
+              Legal & Compliance
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Everything you need to transform your document workflow with cutting-edge AI technology 
-            and enterprise-grade security.
+            Everything you need for legal document analysis, compliance monitoring, and risk assessment 
+            with cutting-edge AI technology and legal-grade security.
           </p>
         </motion.div>
 

@@ -19,11 +19,9 @@ const Footer = () => {
     {
       title: 'Product',
       links: [
-        { name: 'Features', href: '#features' },
-        { name: 'Demo', href: '#demo' },
+        { name: 'Features', href: '/#features' },
+        { name: 'Demo', href: '/#demo' },
         { name: 'Pricing', href: '/pricing' },
-        { name: 'API Documentation', href: '/docs' },
-        { name: 'Integrations', href: '/integrations' },
         { name: 'Security', href: '/security' }
       ]
     },
@@ -31,22 +29,7 @@ const Footer = () => {
       title: 'Company',
       links: [
         { name: 'About Us', href: '/about' },
-        { name: 'Careers', href: '/careers' },
-        { name: 'Blog', href: '/blog' },
-        { name: 'Press', href: '/press' },
-        { name: 'Partners', href: '/partners' },
         { name: 'Contact', href: '/contact' }
-      ]
-    },
-    {
-      title: 'Resources',
-      links: [
-        { name: 'Help Center', href: '/help' },
-        { name: 'Whitepapers', href: '/resources' },
-        { name: 'Case Studies', href: '/case-studies' },
-        { name: 'Webinars', href: '/webinars' },
-        { name: 'Legal Templates', href: '/templates' },
-        { name: 'ROI Calculator', href: '/calculator' }
       ]
     },
     {
@@ -54,22 +37,19 @@ const Footer = () => {
       links: [
         { name: 'Privacy Policy', href: '/privacy' },
         { name: 'Terms of Service', href: '/terms' },
-        { name: 'Cookie Policy', href: '/cookies' },
-        { name: 'GDPR Compliance', href: '/gdpr' },
-        { name: 'Data Processing', href: '/data-processing' },
-        { name: 'SLA', href: '/sla' }
+        { name: 'GDPR Compliance', href: '/gdpr' }
       ]
     }
   ]
 
   const socialLinks = [
-    { name: 'Twitter', icon: Twitter, href: 'https://twitter.com/polygap' },
-    { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/company/polygap' },
-    { name: 'GitHub', icon: Github, href: 'https://github.com/polygap' }
+    { name: 'Twitter', icon: Twitter, href: 'https://twitter.com/poligap' },
+    { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/company/poligap' },
+    { name: 'GitHub', icon: Github, href: 'https://github.com/poligap' }
   ]
 
   const contactInfo = [
-    { icon: Mail, text: 'hello@polygap.com', href: 'mailto:hello@polygap.com' },
+    { icon: Mail, text: 'hello@poligap.com', href: 'mailto:hello@poligap.com' },
     { icon: Phone, text: '+1 (555) 123-4567', href: 'tel:+1-555-123-4567' },
     { icon: MapPin, text: 'Global', href: '#' }
   ]
@@ -90,11 +70,11 @@ const Footer = () => {
               <h3 className="text-2xl md:text-3xl font-bold mb-4">
                 Stay Updated with{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-400">
-                  Tech Insights
+                  Legal & Compliance Insights
                 </span>
               </h3>
               <p className="text-gray-400 text-lg">
-                Get the latest updates on AI technology, industry trends, and product announcements.
+                Get the latest updates on compliance regulations, legal technology trends, and platform updates.
               </p>
             </div>
             
@@ -135,13 +115,13 @@ const Footer = () => {
                 <div className="bg-primary-600 p-2 rounded-lg">
                   <Brain className="h-8 w-8 text-white" />
                 </div>
-                <span className="text-2xl font-bold">Polygap</span>
+                <span className="text-2xl font-bold">Poligap</span>
               </div>
 
               {/* Description */}
               <p className="text-gray-400 mb-6 leading-relaxed">
-                Transforming document workflows with AI-powered analysis. 
-                Trusted by businesses and organizations worldwide.
+                All-in-one comprehensive tool for legal and compliance monitoring assessments. 
+                Trusted by legal teams and organizations worldwide.
               </p>
 
               {/* Contact Info */}
@@ -232,7 +212,7 @@ const Footer = () => {
             className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"
           >
             <div className="text-gray-400 text-sm">
-              © 2024 Polygap. All rights reserved.
+              © 2025 Poligap. All rights reserved.
             </div>
             
             <div className="flex items-center space-x-6 text-sm text-gray-400">

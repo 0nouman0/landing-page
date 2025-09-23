@@ -24,43 +24,43 @@ const DemoSection = () => {
       id: 1,
       icon: Upload,
       title: 'Upload Document',
-      description: 'Simply drag and drop your document or browse to select',
-      details: 'Supports major document formats including PDF, Word, and plain text files',
+      description: 'Simply drag and drop your policy or contract document',
+      details: 'Supports major document formats including PDF, Word, and plain text files for both policies and contracts',
       color: 'bg-blue-500'
     },
     {
       id: 2,
       icon: Brain,
       title: 'AI Analysis',
-      description: 'Advanced AI analyzes your document content',
-      details: 'Intelligent processing identifies key sections, patterns, and areas for improvement',
+      description: 'Advanced AI analyzes your document for compliance and risks',
+      details: 'Intelligent processing identifies compliance gaps, contract clauses, policy violations, and regulatory requirements',
       color: 'bg-purple-500'
     },
     {
       id: 3,
       icon: Edit3,
       title: 'Review Insights',
-      description: 'Interactive interface shows AI insights and suggestions',
-      details: 'Clear presentation of analysis results with actionable recommendations',
+      description: 'Interactive interface shows compliance insights and recommendations',
+      details: 'Clear presentation of compliance analysis, risk assessment, and actionable recommendations for both policies and contracts',
       color: 'bg-green-500'
     },
     {
       id: 4,
       icon: Download,
       title: 'Export Results',
-      description: 'Download your analyzed document in your preferred format',
-      details: 'Export to PDF, Word, or integrate with your existing document systems',
+      description: 'Download compliance reports and analyzed documents',
+      details: 'Export compliance reports, annotated documents, or integrate findings with your legal management systems',
       color: 'bg-orange-500'
     }
   ]
 
-  const features = [
-    'Upload document files',
-    'Get AI-powered insights',
-    'Review suggestions',
-    'Export processed document',
-    'Generate analysis report',
-    'Share with team members'
+  const competitiveAdvantages = [
+    'Advanced AI Legal Models',
+    'Real-time Compliance Updates',
+    'Custom Knowledge Base',
+    'Enterprise-grade Security',
+    'Automated Audit Trails',
+    'Multi-jurisdiction Support'
   ]
 
   // Auto-advance through steps
@@ -115,8 +115,8 @@ const DemoSection = () => {
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Watch how our AI-powered platform transforms document analysis 
-            with intelligent processing and seamless collaboration.
+            Watch how our AI-powered platform transforms policy compliance analysis and contract review 
+            with intelligent processing and seamless legal workflows.
           </p>
           
           {/* Demo Video Placeholder */}
@@ -142,7 +142,7 @@ const DemoSection = () => {
               {/* Video Controls Overlay */}
               <div className="absolute bottom-4 left-4 right-4 bg-black/50 backdrop-blur-sm rounded-lg p-4">
                 <div className="flex items-center justify-between text-white">
-                  <span className="text-sm">Document Analysis Demo</span>
+                  <span className="text-sm">Policy & Contract Analysis Demo</span>
                   <span className="text-sm">2:30</span>
                 </div>
               </div>
@@ -270,7 +270,7 @@ const DemoSection = () => {
                   <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
                   <div className="w-3 h-3 bg-green-400 rounded-full"></div>
                   <div className="ml-4 text-sm text-gray-600">
-                    Polygap Demo - {demoSteps[activeStep].title}
+                    Poligap Demo - {demoSteps[activeStep].title}
                   </div>
                 </div>
               </div>
@@ -304,7 +304,7 @@ const DemoSection = () => {
                     {activeStep === 0 && (
                       <div className="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center">
                         <Upload className="w-8 h-8 text-gray-400 mx-auto mb-2" />
-                        <p className="text-gray-500">Drop your document here</p>
+                        <p className="text-gray-500">Drop your policy or contract here</p>
                       </div>
                     )}
                     
@@ -322,7 +322,7 @@ const DemoSection = () => {
                               className="h-full bg-purple-500"
                             />
                           </div>
-                          <p className="text-sm text-gray-600 mt-1">Analyzing document...</p>
+                          <p className="text-sm text-gray-600 mt-1">Analyzing for compliance...</p>
                         </div>
                       </div>
                     )}
@@ -331,7 +331,7 @@ const DemoSection = () => {
                       <div className="space-y-2">
                         <div className="bg-yellow-100 border-l-4 border-yellow-400 p-3 rounded">
                           <p className="text-sm text-yellow-800">
-                            <strong>Suggestion:</strong> Consider reviewing this section
+                            <strong>Compliance Alert:</strong> Policy gap identified
                           </p>
                         </div>
                         <div className="flex space-x-2">
@@ -345,7 +345,7 @@ const DemoSection = () => {
                       <div className="flex items-center justify-between">
                         <div className="flex items-center space-x-2">
                           <FileText className="w-5 h-5 text-gray-600" />
-                          <span className="text-sm text-gray-700">document-analyzed.pdf</span>
+                          <span className="text-sm text-gray-700">compliance-report.pdf</span>
                         </div>
                         <button className="bg-primary-600 text-white px-4 py-2 rounded text-sm">
                           Download
@@ -369,10 +369,10 @@ const DemoSection = () => {
           className="mt-16 bg-gray-50 rounded-2xl p-8"
         >
           <h3 className="text-xl font-semibold text-gray-900 mb-6 text-center">
-            Key Actions in the Demo
+            What Makes Us Stand Out From Competitors
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {features.map((feature, index) => (
+            {competitiveAdvantages.map((advantage, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -382,7 +382,7 @@ const DemoSection = () => {
                 className="flex items-center space-x-2"
               >
                 <CheckCircle className="w-5 h-5 text-secondary-600 flex-shrink-0" />
-                <span className="text-gray-700 font-medium">{feature}</span>
+                <span className="text-gray-700 font-medium">{advantage}</span>
               </motion.div>
             ))}
           </div>

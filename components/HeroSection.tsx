@@ -6,10 +6,10 @@ import { ArrowRight, Play, CheckCircle, Sparkles } from 'lucide-react'
 
 const HeroSection = () => {
   const features = [
-    'AI-powered document analysis',
-    'Interactive editing interface',
-    'Enterprise-grade security',
-    'Streamlined review process'
+    'Legal document analysis',
+    'Compliance monitoring',
+    'Risk assessment tools',
+    'Regulatory compliance tracking'
   ]
 
   return (
@@ -48,9 +48,9 @@ const HeroSection = () => {
               transition={{ delay: 0.3 }}
               className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6"
             >
-              Advanced Document Analysis for{' '}
+              All-in-One Comprehensive Tool for{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-secondary-600">
-                Modern Teams
+                Legal & Compliance
               </span>
             </motion.h1>
 
@@ -61,9 +61,9 @@ const HeroSection = () => {
               transition={{ delay: 0.4 }}
               className="text-xl text-gray-600 mb-8 max-w-2xl"
             >
-              Enhance your document workflow with AI-powered analysis and insights. 
-              Streamline your processes with intelligent suggestions, collaborative tools, 
-              and enterprise-grade security.
+              Comprehensive legal and compliance monitoring assessments powered by AI. 
+              Streamline your legal workflows with intelligent document analysis, risk assessment, 
+              and regulatory compliance tracking.
             </motion.p>
 
             {/* Feature List */}
@@ -138,7 +138,7 @@ const HeroSection = () => {
                 <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
                 <div className="w-3 h-3 bg-green-400 rounded-full"></div>
                 <div className="ml-4 bg-gray-100 rounded-lg px-4 py-1 text-sm text-gray-600">
-                  polygap.com/dashboard
+                  poligap.com/dashboard
                 </div>
               </div>
 
