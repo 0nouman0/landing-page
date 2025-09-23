@@ -200,7 +200,7 @@ const BenefitsSection = () => {
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            See the measurable impact of AI-powered document analysis on your team's efficiency, 
+            See the measurable impact of AI-powered document analysis on your team&apos;s efficiency, 
             accuracy, and productivity.
           </p>
         </motion.div>

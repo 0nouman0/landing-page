@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Star, Quote, ArrowLeft, ArrowRight, Building2, Users, Scale, Play, Pause } from 'lucide-react'
 
@@ -93,6 +93,29 @@ const TestimonialsSection = () => {
     { name: 'Corp F', logo: 'CF' }
   ]
 
+  const nextTestimonial = useCallback(() => {
+    setActiveTestimonial((prev) => (prev + 1) % testimonials.length)
+    setIsPaused(true)
+    setTimeout(() => setIsPaused(false), 10000) // Resume auto-play after 10 seconds
+  }, [testimonials.length])
+
+  const prevTestimonial = useCallback(() => {
+    setActiveTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length)
+    setIsPaused(true)
+    setTimeout(() => setIsPaused(false), 10000) // Resume auto-play after 10 seconds
+  }, [testimonials.length])
+
+  const goToTestimonial = useCallback((index: number) => {
+    setActiveTestimonial(index)
+    setIsPaused(true)
+    setTimeout(() => setIsPaused(false), 10000) // Resume auto-play after 10 seconds
+  }, [])
+
+  const toggleAutoPlay = useCallback(() => {
+    setIsAutoPlaying(!isAutoPlaying)
+    setIsPaused(false)
+  }, [isAutoPlaying])
+
   // Auto-play functionality
   useEffect(() => {
     if (!isAutoPlaying || isPaused) return
@@ -119,30 +142,7 @@ const TestimonialsSection = () => {
 
     window.addEventListener('keydown', handleKeyDown)
     return () => window.removeEventListener('keydown', handleKeyDown)
-  }, [])
-
-  const nextTestimonial = () => {
-    setActiveTestimonial((prev) => (prev + 1) % testimonials.length)
-    setIsPaused(true)
-    setTimeout(() => setIsPaused(false), 10000) // Resume auto-play after 10 seconds
-  }
-
-  const prevTestimonial = () => {
-    setActiveTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length)
-    setIsPaused(true)
-    setTimeout(() => setIsPaused(false), 10000) // Resume auto-play after 10 seconds
-  }
-
-  const goToTestimonial = (index: number) => {
-    setActiveTestimonial(index)
-    setIsPaused(true)
-    setTimeout(() => setIsPaused(false), 10000) // Resume auto-play after 10 seconds
-  }
-
-  const toggleAutoPlay = () => {
-    setIsAutoPlaying(!isAutoPlaying)
-    setIsPaused(false)
-  }
+  }, [nextTestimonial, prevTestimonial, toggleAutoPlay])
 
   return (
     <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
@@ -239,7 +239,7 @@ const TestimonialsSection = () => {
 
             {/* Quote */}
             <blockquote className="text-xl md:text-2xl text-gray-700 leading-relaxed mb-8 font-medium">
-              "{testimonials[activeTestimonial].quote}"
+              &ldquo;{testimonials[activeTestimonial].quote}&rdquo;
             </blockquote>
 
             {/* Author Info */}

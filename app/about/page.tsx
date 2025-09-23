@@ -32,7 +32,7 @@ export default function AboutPage() {
     {
       icon: Brain,
       title: 'Innovation First',
-      description: 'We leverage cutting-edge AI technology to solve complex legal challenges and push the boundaries of what\'s possible in contract review.',
+      description: 'We leverage cutting-edge AI technology to solve complex legal challenges and push the boundaries of what&apos;s possible in contract review.',
       color: 'bg-blue-500'
     },
     {
@@ -50,7 +50,7 @@ export default function AboutPage() {
     {
       icon: Heart,
       title: 'Client Success',
-      description: 'Your success is our success. We\'re committed to providing exceptional support and ensuring you achieve your legal workflow goals.',
+      description: 'Your success is our success. We&apos;re committed to providing exceptional support and ensuring you achieve your legal workflow goals.',
       color: 'bg-red-500'
     }
   ]
@@ -143,7 +143,7 @@ export default function AboutPage() {
               </span>
             </h1>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
-              We're on a mission to make legal document review faster, more accurate, and more accessible 
+              We&apos;re on a mission to make legal document review faster, more accurate, and more accessible 
               for legal teams worldwide. Our AI-powered platform is trusted by Fortune 500 companies, 
               law firms, and legal departments across the globe.
             </p>
@@ -189,8 +189,8 @@ export default function AboutPage() {
                 technology and empower legal teams to work more efficiently and effectively.
               </p>
               <p className="text-lg text-gray-600 mb-8">
-                By combining cutting-edge artificial intelligence with deep legal expertise, we're building 
-                the future of legal document analysis—one that's faster, more accurate, and more accessible 
+                By combining cutting-edge artificial intelligence with deep legal expertise, we&apos;re building 
+                the future of legal document analysis—one that&apos;s faster, more accurate, and more accessible 
                 than ever before.
               </p>
               
@@ -411,8 +411,8 @@ export default function AboutPage() {
               Ready to Join Our Mission?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Whether you're looking to transform your legal workflow or join our team, 
-              we'd love to hear from you.
+              Whether you&apos;re looking to transform your legal workflow or join our team, 
+              we&apos;d love to hear from you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button

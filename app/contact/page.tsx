@@ -125,7 +125,7 @@ export default function ContactPage() {
                   >
                     <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">Message Sent!</h3>
-                    <p className="text-gray-600">Thank you for reaching out. We'll get back to you within 24 hours.</p>
+                    <p className="text-gray-600">Thank you for reaching out. We&apos;ll get back to you within 24 hours.</p>
                   </motion.div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-6">
@@ -238,8 +238,8 @@ export default function ContactPage() {
               <div>
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h2>
                 <p className="text-gray-600 mb-8">
-                  Ready to revolutionize your contract review process? Get in touch with our team 
-                  and discover how ContractAI can transform your legal workflow.
+                  Ready to transform your document workflow? Get in touch with our team 
+                  and discover how Polygap can transform your document workflow.
                 </p>
               </div>
 

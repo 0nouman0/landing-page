@@ -19,40 +19,6 @@ const DemoSection = () => {
   const [isAutoPlaying, setIsAutoPlaying] = useState(true)
   const [progress, setProgress] = useState(0)
 
-  // Auto-advance through steps
-  useEffect(() => {
-    if (!isAutoPlaying) return
-    
-    const interval = setInterval(() => {
-      setActiveStep((prev) => (prev + 1) % demoSteps.length)
-      setProgress(0)
-    }, 4000)
-    
-    return () => clearInterval(interval)
-  }, [isAutoPlaying])
-
-  // Progress bar animation
-  useEffect(() => {
-    if (!isAutoPlaying) return
-    
-    const progressInterval = setInterval(() => {
-      setProgress((prev) => {
-        if (prev >= 100) return 0
-        return prev + (100 / 40) // 4 seconds = 40 intervals of 100ms
-      })
-    }, 100)
-    
-    return () => clearInterval(progressInterval)
-  }, [activeStep, isAutoPlaying])
-
-  const handleStepClick = (index: number) => {
-    setActiveStep(index)
-    setIsAutoPlaying(false)
-    setProgress(0)
-    // Resume auto-play after 10 seconds
-    setTimeout(() => setIsAutoPlaying(true), 10000)
-  }
-
   const demoSteps = [
     {
       id: 1,
@@ -96,6 +62,40 @@ const DemoSection = () => {
     'Generate analysis report',
     'Share with team members'
   ]
+
+  // Auto-advance through steps
+  useEffect(() => {
+    if (!isAutoPlaying) return
+    
+    const interval = setInterval(() => {
+      setActiveStep((prev) => (prev + 1) % demoSteps.length)
+      setProgress(0)
+    }, 4000)
+    
+    return () => clearInterval(interval)
+  }, [isAutoPlaying, demoSteps.length])
+
+  // Progress bar animation
+  useEffect(() => {
+    if (!isAutoPlaying) return
+    
+    const progressInterval = setInterval(() => {
+      setProgress((prev) => {
+        if (prev >= 100) return 0
+        return prev + (100 / 40) // 4 seconds = 40 intervals of 100ms
+      })
+    }, 100)
+    
+    return () => clearInterval(progressInterval)
+  }, [activeStep, isAutoPlaying])
+
+  const handleStepClick = (index: number) => {
+    setActiveStep(index)
+    setIsAutoPlaying(false)
+    setProgress(0)
+    // Resume auto-play after 10 seconds
+    setTimeout(() => setIsAutoPlaying(true), 10000)
+  }
 
   return (
     <section id="demo" className="py-20 bg-white">
