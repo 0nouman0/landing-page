@@ -58,7 +58,7 @@ const Footer = () => {
     <footer className="bg-gray-900 text-white">
       {/* Newsletter Section */}
       <div className="border-b border-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+  <div className="max-w-none mx-auto px-2 sm:px-4 lg:px-6 py-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -100,7 +100,7 @@ const Footer = () => {
       </div>
 
       {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+  <div className="max-w-none mx-auto px-2 sm:px-4 lg:px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Brand Section */}
           <div className="lg:col-span-2">
@@ -115,7 +115,7 @@ const Footer = () => {
                 <div className="bg-primary-600 p-2 rounded-lg">
                   <Brain className="h-8 w-8 text-white" />
                 </div>
-                <span className="text-2xl font-bold">Poligap</span>
+                <span className="text-2xl font-bold lobster-two-regular">Poligap</span>
               </div>
 
               {/* Description */}
@@ -203,7 +203,7 @@ const Footer = () => {
 
       {/* Bottom Bar */}
       <div className="border-t border-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+  <div className="max-w-none mx-auto px-2 sm:px-4 lg:px-6 py-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

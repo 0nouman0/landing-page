@@ -49,7 +49,7 @@ const CTASection = () => {
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-white/5 rounded-full mix-blend-multiply filter blur-2xl"></div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div className="relative max-w-none mx-auto px-2 sm:px-4 lg:px-6">
         {/* Main CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -58,7 +58,7 @@ const CTASection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 lobster-two-regular">
             Ready to Transform{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary-300 to-accent-300">
               Your Workflow?
@@ -68,28 +68,6 @@ const CTASection = () => {
             Join thousands of professionals who have transformed their workflow with AI-powered document analysis. 
             Start your journey today and experience the future of productivity.
           </p>
-
-          {/* Stats */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12"
-          >
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-secondary-300 mb-2">95%</div>
-              <div className="text-gray-300">Faster Processing</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-accent-300 mb-2">99.2%</div>
-              <div className="text-gray-300">AI Accuracy</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-green-300 mb-2">85%</div>
-              <div className="text-gray-300">Time Saved</div>
-            </div>
-          </motion.div>
         </motion.div>
 
         {/* CTA Options Grid */}
@@ -182,33 +160,7 @@ const CTASection = () => {
           </div>
         </motion.div>
 
-        {/* Trust Indicators */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="mt-12 text-center"
-        >
-          <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8 text-gray-200">
-            <div className="flex items-center space-x-2">
-              <div className="w-2 h-2 bg-secondary-400 rounded-full"></div>
-              <span className="text-sm font-medium">No setup fees</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <div className="w-2 h-2 bg-secondary-400 rounded-full"></div>
-              <span className="text-sm font-medium">Cancel anytime</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <div className="w-2 h-2 bg-secondary-400 rounded-full"></div>
-              <span className="text-sm font-medium">SOC 2 compliant</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <div className="w-2 h-2 bg-secondary-400 rounded-full"></div>
-              <span className="text-sm font-medium">24/7 support</span>
-            </div>
-          </div>
-        </motion.div>
+        {/* Trust Indicators removed per request */}
       </div>
     </section>
   )

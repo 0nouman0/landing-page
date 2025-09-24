@@ -35,14 +35,14 @@ const Header = () => {
           : 'bg-transparent'
       )}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div className="max-w-none mx-auto px-2 sm:px-4 lg:px-6">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <div className="bg-primary-600 p-2 rounded-lg">
               <Brain className="h-6 w-6 text-white" />
             </div>
-            <span className="text-xl font-bold text-gray-900">
+            <span className="text-xl font-bold text-gray-900 lobster-two-regular">
               Poligap
             </span>
           </div>
