@@ -139,6 +139,30 @@ NEXT_PUBLIC_SITE_URL=https://your-domain.com
 NEXT_PUBLIC_GA_ID=your-google-analytics-id
 NEXT_PUBLIC_HOTJAR_ID=your-hotjar-id
 ```
+## Authentication (Clerk)
+
+This project ships with Clerk auth scaffolding:
+
+- Sign in: `/sign-in`
+- Sign up: `/sign-up`
+- Protected page example: `/dashboard`
+
+Setup steps:
+
+1. Create a Clerk application (https://clerk.com/)
+2. Copy your Publishable Key and Secret Key to `.env.local` using `.env.local.example` as a template:
+
+```
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_...
+CLERK_SECRET_KEY=sk_test_...
+```
+
+3. Enable OAuth providers (e.g., Google) in Clerk Dashboard → User & Authentication → Social Connections.
+4. Start the dev server and visit `/sign-in` or `/sign-up`.
+
+Optional SSO placeholder:
+
+- `GET /api/auth/kroolo` redirects to `process.env.KROOLO_SSO_URL` with a returnTo param. Replace this URL with your SSO initiator.
 
 ### SEO Configuration
 Update the metadata in `app/layout.tsx`:

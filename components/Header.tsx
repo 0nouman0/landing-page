@@ -3,11 +3,14 @@
 import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Menu, X, Brain, ChevronDown } from 'lucide-react'
+import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
+import Link from 'next/link'
 import { cn } from '@/lib/utils'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const clerkEnabled = Boolean(process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,14 +41,14 @@ const Header = () => {
   <div className="max-w-none mx-auto px-2 sm:px-4 lg:px-6">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
+          <Link href="/" aria-label="Poligap Home" className="flex items-center space-x-2">
             <div className="bg-primary-600 p-2 rounded-lg">
               <Brain className="h-6 w-6 text-white" />
             </div>
             <span className="text-xl font-bold text-gray-900 lobster-two-regular">
               Poligap
             </span>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
@@ -60,18 +63,35 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Desktop CTAs */}
+          {/* Desktop CTAs / Auth */}
           <div className="hidden md:flex items-center space-x-4">
-            <button className="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200">
-              Sign In
-            </button>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-primary-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-primary-700 transition-colors duration-200"
-            >
-              Get Demo
-            </motion.button>
+            {clerkEnabled ? (
+              <>
+                <SignedOut>
+                  <Link href="/sign-in" className="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200">
+                    Sign In
+                  </Link>
+                  <Link href="/sign-up" className="bg-primary-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-primary-700 transition-colors duration-200">
+                    Get Started
+                  </Link>
+                </SignedOut>
+                <SignedIn>
+                  <Link href="/dashboard" className="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200">
+                    Dashboard
+                  </Link>
+                  <UserButton afterSignOutUrl="/" />
+                </SignedIn>
+              </>
+            ) : (
+              <>
+                <Link href="/sign-in" className="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200">
+                  Sign In
+                </Link>
+                <Link href="/sign-up" className="bg-primary-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-primary-700 transition-colors duration-200">
+                  Get Started
+                </Link>
+              </>
+            )}
           </div>
 
           {/* Mobile menu button */}
@@ -107,12 +127,35 @@ const Header = () => {
                 </a>
               ))}
               <div className="flex flex-col space-y-2 px-4 pt-4 border-t border-gray-200">
-                <button className="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200 text-left">
-                  Sign In
-                </button>
-                <button className="bg-primary-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-primary-700 transition-colors duration-200">
-                  Get Demo
-                </button>
+                {clerkEnabled ? (
+                  <>
+                    <SignedOut>
+                      <Link href="/sign-in" className="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200 text-left">
+                        Sign In
+                      </Link>
+                      <Link href="/sign-up" className="bg-primary-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-primary-700 transition-colors duration-200 text-center">
+                        Get Started
+                      </Link>
+                    </SignedOut>
+                    <SignedIn>
+                      <Link href="/dashboard" className="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200 text-left">
+                        Dashboard
+                      </Link>
+                      <div className="pt-2">
+                        <UserButton afterSignOutUrl="/" />
+                      </div>
+                    </SignedIn>
+                  </>
+                ) : (
+                  <>
+                    <Link href="/sign-in" className="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200 text-left">
+                      Sign In
+                    </Link>
+                    <Link href="/sign-up" className="bg-primary-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-primary-700 transition-colors duration-200 text-center">
+                      Get Started
+                    </Link>
+                  </>
+                )}
               </div>
             </nav>
           </motion.div>
