@@ -566,7 +566,7 @@ const BookDemoPage = () => {
               onClick={handleSkip}
               className="bg-white hover:bg-gray-50 text-gray-700 px-4 py-2 rounded-lg font-medium transition-colors duration-200 flex items-center space-x-2 text-sm shadow-sm border border-gray-200"
             >
-              <span>Skip, I'll do it later</span>
+              <span>Skip, I&apos;ll do it later</span>
               <X className="w-4 h-4" />
             </motion.button>
           </div>
@@ -585,7 +585,7 @@ const BookDemoPage = () => {
               </div>
               <h2 className="text-2xl font-bold text-gray-900 mb-2">Demo Request Submitted!</h2>
               <p className="text-gray-600 mb-6">
-                Thank you for your interest. We'll reach out within 24 hours to confirm your demo time.
+                Thank you for your interest. We&apos;ll reach out within 24 hours to confirm your demo time.
               </p>
               <Link
                 href="/dashboard"
