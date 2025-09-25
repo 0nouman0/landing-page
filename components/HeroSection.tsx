@@ -91,7 +91,7 @@ const HeroSection = () => {
             >
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Link
-                  href="/bookdemo"
+                  href="/sign-up?redirect_url=/book"
                   className="bg-primary-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary-700 transition-colors duration-200 flex items-center justify-center space-x-2 shadow-lg"
                 >
                   <span>Book a Demo Call</span>
