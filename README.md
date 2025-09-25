@@ -145,7 +145,7 @@ This project ships with Clerk auth scaffolding:
 
 - Sign in: `/sign-in`
 - Sign up: `/sign-up`
-- Protected page example: `/dashboard`
+<!-- Removed dashboard protected page in current iteration -->
 
 Setup steps:
 

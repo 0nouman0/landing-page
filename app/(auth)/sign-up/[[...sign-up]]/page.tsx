@@ -37,7 +37,7 @@ export default function Page() {
                         headerTitle: 'lobster-two-regular',
                       },
                     }}
-                    fallbackRedirectUrl="/dashboard"
+                    fallbackRedirectUrl="/"
                     signInUrl="/sign-in"
                   />
                 ) : (
@@ -65,7 +65,7 @@ export default function Page() {
                 )}
                 {/* Kroolo SSO */}
                 <div className="mt-4 text-center">
-                  <Link href="/api/auth/kroolo?returnTo=/dashboard" className="inline-flex items-center justify-center gap-2 text-primary-700 hover:text-primary-800 font-semibold">
+                  <Link href="/api/auth/kroolo?returnTo=/" className="inline-flex items-center justify-center gap-2 text-primary-700 hover:text-primary-800 font-semibold">
                     <span>Enterprise SSO (Kroolo)</span>
                   </Link>
                 </div>

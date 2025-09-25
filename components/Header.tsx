@@ -76,9 +76,6 @@ const Header = () => {
                   </Link>
                 </SignedOut>
                 <SignedIn>
-                  <Link href="/dashboard" className="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200">
-                    Dashboard
-                  </Link>
                   <UserButton afterSignOutUrl="/" />
                 </SignedIn>
               </>
@@ -138,9 +135,6 @@ const Header = () => {
                       </Link>
                     </SignedOut>
                     <SignedIn>
-                      <Link href="/dashboard" className="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200 text-left">
-                        Dashboard
-                      </Link>
                       <div className="pt-2">
                         <UserButton afterSignOutUrl="/" />
                       </div>
